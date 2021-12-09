@@ -1,4 +1,6 @@
-Welcome to the StableMatching folder!
+Welcome to the Lecture 1 folder!
+
+In this lecture, the Stable Matching problem is covered.
 
 This folder contains all the files pertaining to the introductory StableMatching problem, including an input.in file, the Gale-Shapely program file, and the output.out file.
 
