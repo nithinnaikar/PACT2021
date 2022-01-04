@@ -1,7 +1,3 @@
-import sys
-
-sys.stdin = open("input.in", "r")
-sys.stdout = open("output.out", "w")
 
 num_people, num_pets = map(int, input().split())
 
