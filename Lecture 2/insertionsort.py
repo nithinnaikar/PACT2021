@@ -28,5 +28,14 @@ def insertion_sort(array):
             i = i - 1
         array[i + 1] = key
 
+# Recursive Insertion Sort is more elegant and clearer to understand
+
+def Insert(
+def recursive_insertion_sort(array):
+    if len(array) == 1:
+        return array
+    else:
+        sorted_array = recursive_insertion_sort(array[:len(array)-1])
+        Insert(sorted_array, array[-1])
 insertion_sort(a)
 print(a)
