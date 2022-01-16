@@ -28,3 +28,5 @@ def insertion_sort(array):
             i = i - 1
         array[i + 1] = key
 
+insertion_sort(a)
+print(a)
