@@ -43,4 +43,4 @@ def recursive_linear_search(array, element):
         return array[0] == element
     # Recursive step
     else:
-        return (array[len(array) - 1] == element) or (recursive_linear_search(array[:-1], element))
+        return (array[-1] == element) or (recursive_linear_search(array[:-1], element))
