@@ -25,11 +25,14 @@ def binary_search(array, element):
     low = 0
     high = len(array)
     
-    mid = math.floor((low + high) / 2)
-    if array[mid] == element:
-        return True
-    elif array[mid] < element:
-        return binary_search(array[mid+1:high], element)
+    if low > high:
+        return False
     else:
-        return binary_search(array[low:mid-1], element)
+        mid = math.floor((low + high) / 2)
+        if array[mid] == element:
+            return True
+        elif array[mid] < element:
+            return binary_search(array[mid+1:high], element)
+        else:
+            return binary_search(array[low:mid-1], element)
         
