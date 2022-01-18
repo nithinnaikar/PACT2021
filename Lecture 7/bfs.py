@@ -35,7 +35,7 @@ def BFS(G, s):
             for neighbor in G[vertex]:
                 if discovered[neighbor] == False:
                     discovered[neighbor] = True
-                    L[i + 1] += [neighbor]
+                    L[i + 1].append(neighbor)
                     T.append((vertex, neighbor)) 
         i += 1
     return T
