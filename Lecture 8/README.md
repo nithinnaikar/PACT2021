@@ -1,4 +1,4 @@
-In this lecture, Merge Sort and O(nlgn) divide and conquer algorithms are discussed.
+In this lecture, Merge Sort and O(nlogn) divide and conquer algorithms are discussed.
 
 Merge Sort is an algorithm that attempts to solve the previously-discussed sorting problem. In particular, Merge Sort can be seen as an improved version of Insertion Sort. 
 
