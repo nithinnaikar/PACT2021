@@ -9,8 +9,7 @@ vertex (i.e. all vertices in connected component containing source). If any undi
 this process until it has discovered every vertex. 
 
 Whenever DFS discovers a neighboring vertex from an already discovered vertex in its scan of the adjacency list, it records this event by setting the neighbors predecessor
-attribute to the discovered vertex. For example, if we input an undirected connected graph consisting of a handful of vertices, BFS will return a tree with more breadth whereas DFS will return a long, skinny 
-depth-wise tree.
+attribute to the discovered vertex. 
 
 Unlike BFS, the predecessor subgraph produced by DFS may consist of several trees because the search may be done from multiple source vertices. This is called the DFS forest. 
 
