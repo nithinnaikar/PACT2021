@@ -60,6 +60,7 @@ To form the list P', we extract the elements of Y that are within delta distance
 We covered a lot of material, so let's review quickly. 
 
 Presort: Given the list P, make two copies in X and Y and sort X according to x-coordinates and Y according to Y-coordinates.
+Note: I don't presort in the implementation for sake of simplicity
 
 Recursive Procedure: ClosestPair(X, Y)
 Basis: If number of elements is <= 3, then brute-force and return the closest pair distance delta. 
