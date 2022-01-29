@@ -35,7 +35,54 @@ Cost of schedule: 65.
 
 Ordering #2 is more optimal than ordering #1 because it has a lower cost. 
 
-Idea: Algorithm should operate in increasing order of processing times. 
+Algorithm: Earliest Deadline First (EDF). Meaning that we process job intervals in increasing order of deadline. We start with intervals with the earliest deadlines (i.e.
+get them out of the way first) and move on to intervals with later deadlines. As you can see, this is a very intuitive idea and mimics that of how students deal with their own homework. 
+
+Step 1: Sort jobs in increasing order of deadline
+Step 2: Process the jobs in the above order non-preemptively one after the other. 
+
+Proof of Correctness:
+
+Observations
+
+- There is an optimal schedule with no idle time
+- Our schedule has no idle time
+
+Definition: job i is considered inverted with job j if i precedes j in the schedule but the deadline of i is later than the deadline of j. 
+
+Observation 3: Our schedule has no inversions
+
+Lemma of above observation (without proof):
+
+Two schedules with no inversions and no idle time have the same max lateness. 
+
+Lemma: There is an optimal schedule with no inversions and no idle time. 
+
+Proof: Assume otherwise for purpose of contradiction.  Among all optimal schedules with no idle time, let OPT be the optimal schedule with the smallest number of inversions. 
+Let jobs i and j be inverted in OPT. 
+
+Now consider OPT', which is the same as OPT except the jobs i and j are switched in the ordering. 
+
+Wishful thinkings: jobs i and j (inverted jobs) are consecutive in the schedule (adjacent intervals).
+
+It now suffices to show that if an optimal schedule has inversions then there must be two consecutive jobs that are inverted. 
+
+Case 1: i and j are consecutive. Done
+
+Case 2: i and j are not consecutive. 
+
+This is done with a nice visual proof.
+
+Consider a two dimensional graph in which the x-axis represents the jobs in the interval (i, j) (ex. i, i+1, i+2, ... ,j) and the y-axis represents the deadline time. We know
+that jobs i and j are inverted, meaning that i appears before j in the ordering but the deadline time of i is greater than that of j. Starting from job i and moving along the
+x-axis, we know that the deadline time on the y-axis will increase. However, at job j, we know that the deadline time strictly decreases down toward it, since the deadline time
+of j is less than that of i. Consider job j - 1. Job j - 1 is located on this declining slope and therefore has a higher deadline time than that of j and is placed before it in
+the ordering, forming a consecutive inversion. Proved.
+
+Note that these consecutive jobs can be swapped without increasing max lateness. Thus  we have found a new OPT ordering with no idle time and one less inversion, contradicting
+the fact that OPT was an optimal schedule with min. number of inversions. 
+
+
 
 
 
